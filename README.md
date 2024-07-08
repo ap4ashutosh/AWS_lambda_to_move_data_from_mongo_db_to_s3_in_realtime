@@ -56,7 +56,7 @@ zip -g lambda_layer.zip change_sync_lambda.py
 2. Create a Lambda Layer:
    - Navigate to Layers and click "Create layer"
    - Name: "mongodb-s3-sync-layer"
-   - Upload the `lambda_layer.zip` file
+   - Upload the `lambda function files.zip` file
    - Compatible runtimes: Python 3.12
    - Click "Create"
 
@@ -66,7 +66,7 @@ zip -g lambda_layer.zip change_sync_lambda.py
    - Runtime: Python 3.12
    - Architecture: x86_64
    - Click "Create function"
-   - In Configuration, set Handler to `full_sync_lambda.lambda_handler`
+   - In Configuration, set Handler to `lambda function files.zip.lambda_handler`
    - Add the Layer you created
    - Set appropriate memory and timeout values
    - Configure environment variables (MongoDB connection string, S3 bucket name)
